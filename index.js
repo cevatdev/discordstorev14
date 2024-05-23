@@ -6,7 +6,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 // Discord Developer Portal'dan aldığınız bot token'ı buraya koyun
-const BOT_TOKEN = 'MTI0MzEzMzU5MTgxNTMyMzY5MA.GmMPeV.ozBwMMAtTv0f3QQeTpCHgrcjSaJUTiffrFwQIY';
+
 // Discord Developer Portal'dan aldığınız uygulama ID'sini (Client ID) buraya koyun
 const CLIENT_ID = '1243133591815323690';
 // Komutları belirli bir sunucuya eklemek için sunucu ID'sini buraya koyun
@@ -123,4 +123,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.login(BOT_TOKEN);
+client.login(process.env.token);
